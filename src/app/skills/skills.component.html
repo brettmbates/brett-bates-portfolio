@@ -1,0 +1,10 @@
+<table align="center" style="margin: 5px;" width="100%">
+    <tr *ngFor="let skill of skillsList; let i=index;" valign="top">
+        <td width="75%" class="tdbg{{i % 2}}">
+            <div>{{skill.name}}</div>
+        </td>
+        <td width="25%" align="right" class="tdbg{{i % 2}}">
+            <div>{{skill.experience}}</div>
+        </td>
+    </tr>
+</table>

@@ -1,0 +1,7 @@
+<span *ngFor="let certification of certificationList">
+    <a><img (mouseover)="onMouseOver(certification)" (mouseout)="onMouseOut()" src="{{certification.icon}}"/></a>
+</span>
+<div *ngIf="selectedCertification">
+    <span>{{selectedCertification.title}} - Earned: {{selectedCertification.earn_date}}</span>
+    <p>{{selectedCertification.description}}</p>
+</div>

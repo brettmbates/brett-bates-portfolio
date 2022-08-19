@@ -1,0 +1,39 @@
+<table align="center" style="margin: 5px;" width="100%">
+    <tr *ngFor="let experience of experienceList; let i=index;" valign="top">
+        <td class="tdbg{{i % 2}}">
+            <table style="padding-bottom: 20px;">
+                <tr vAlign="top">
+                    <td width="33%">
+                        <div>{{experience.daterange}}</div>
+                    </td>
+                    <td width="33%" class="tdbg{{i % 2}}">
+                        <div>{{experience.company}}</div>
+                    </td>
+                    <td class="tdbg{{i % 2}}">
+                        <div>{{experience.url}}</div>
+                    </td>
+                </tr>
+                <tr *ngFor="let position of experience.positionList;" let j="index;">
+                    <td colspan="100%">
+                        <table>
+                            <tr>
+                                <td>
+                                    {{position.title}}
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <ul>
+                                        <li *ngFor="let task of position.taskList;">
+                                            {{task.description}}
+                                        </li>
+                                    </ul>
+                                </td>    
+                            </tr>
+                        </table>
+                    </td>
+                </tr>
+            </table>
+        </td>
+    </tr>
+</table>
